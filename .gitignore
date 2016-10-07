@@ -15,4 +15,5 @@ node_modules/
 tests/coverage_html/
 tests/.coverage
 build/
+development.py
 tests/report/
