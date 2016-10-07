@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'apps.accounts',
     'compressor',
     'djangobower',
-    'django-extensions',
+    'django_extensions',
 ]
 
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')

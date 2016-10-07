@@ -1,0 +1,25 @@
+
+
+body {
+    background-image: linear-gradient(to right, #fdd100, #fdd100 50%, #f5f5f5 50%, #f5f5f5);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    height:100%;
+    width:100%;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+.content {
+    width:100%;
+    min-width: 900px;
+    height:100%;
+    min-height:600px;
+}
+
+a, input[type='submit'] {
+    cursor: pointer;
+}

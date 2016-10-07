@@ -1,0 +1,21 @@
+{% load compress %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SunRated</title>
+    {% compress css %}
+        <link rel="stylesheet" type="text/x-scss" href="{% static 'sass/login.scss' %}">
+    {% endcompress %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+</head>
+<body>
+
+
+</body>
+    <footer>
+ 
+    </footer>
+</html>
