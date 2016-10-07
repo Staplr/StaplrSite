@@ -37,8 +37,29 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.accounts'
+    'apps.accounts',
+    'compressor',
+    'djangobower',
+    'django-extensions',
 ]
+
+BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
+
+BOWER_INSTALLED_APPS = (
+    'bootstrap-sass-official#3.3.1',
+)
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
+
+STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static/'))
+STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../media/'))
+MEDIA_URL = '/media/'
+
+COMPRESS_URL = STATIC_URL
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -93,6 +114,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+    'djangobower.finders.BowerFinder',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
