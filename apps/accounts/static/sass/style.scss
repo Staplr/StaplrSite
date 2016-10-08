@@ -1,0 +1,77 @@
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+body {
+  height: calc(100% - 50px);
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+  color: #fff;
+  background-color: #293846;
+}
+
+.nav {
+  li.active {
+    border-left: 4px solid #19aa8d;
+    a {
+      background-color: #DDD;
+    }
+  }
+
+  li {
+    a {
+      color: #a7b1c2;
+      font-weight: 600;
+      padding: 14px 20px 14px 25px;
+    }
+
+    a:focus, a:hover {
+      background-color: #293846 !important;
+    }
+  }
+}
+
+table.table-notes {
+  .file-icon {
+    margin-right: 10px;
+  }
+}
+
+.custom-panel {
+  min-height: 200px;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 1px 1px 5px #DDD;
+  background-color: #FFF;
+  margin-bottom: 20px;
+}
+
+.title {
+  border-bottom: 1px solid #DDD;
+  padding: 14px;
+  background-color: #FFF;
+  margin: -10px -25px;
+  margin-bottom: 20px;
+  h3 {
+    margin: 0;
+  }
+}
+
+.card {
+  min-height: 150px;
+  margin: 15px;
+  div {
+    border: 1px solid #DDD;
+    min-height: 150px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px #DDD;
+  }
+}
+
+#add-flashcard {
+  min-height: 150px;
+}
