@@ -36,6 +36,10 @@
             <div class="row">
                 <div class="col-sm-12 custom-panel">
                     <h4>Courses</h4>
+                    <button type="button" data-toggle="modal" data-target="#create-course-dialog" class="btn btn-default">Create Course...</button>
+                    <button type="button" class="btn btn-default">Add Course...</button>
+
+                    <br><br>
                     <div class="row">
                         <div class="col-xs-6 col-sm-4">
                             <div class="course-preview shadow">
@@ -100,5 +104,36 @@
     </div>
 </div>
 
+<div class="modal fade" id="create-course-dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Create Course</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="txtTitle">Title</label>
+                        <input name="title" type="text" class="form-control" id="txtTitle">
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtDescription">Description</label>
+                        <textarea name="description" class="form-control" rows="3" id="txtDescription"></textarea>
+                        </small>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="btn-create-course" type="button" class="btn btn-primary">Add</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 {% endblock %}}
