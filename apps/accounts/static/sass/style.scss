@@ -44,7 +44,7 @@ table.table-notes {
   min-height: 200px;
   border: 1px solid #DDD;
   border-radius: 4px;
-  padding: 8px;
+  padding: 15px;
   box-shadow: 1px 1px 5px #DDD;
   background-color: #FFF;
   margin-bottom: 20px;
@@ -68,11 +68,17 @@ table.table-notes {
 .card {
   min-height: 150px;
   margin: 15px;
+
   div {
     border: 1px solid #DDD;
     min-height: 150px;
     padding: 10px;
     box-shadow: 1px 1px 5px #DDD;
+    background-color: #FFF;
+  }
+
+  div.front {
+    font-weight: bold;
   }
 }
 
@@ -138,4 +144,32 @@ button#btn-add-flashcard {
     background: white;
     cursor: inherit;
     display: block;
+}
+
+// Deck Page
+.deck-title {
+  color: #e6e6e6;
+}
+
+.flashcard-nav-controls {
+  button {
+    width: 100px;
+    height: 50px;
+    margin: 15px;
+  }
+}
+
+.flashcard-list-item {
+  border: 1px solid #DDD;
+  background: #FFF;
+  padding: 15px;
+  margin: 15px;
+  min-height: 75px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f5f5f5;
+  }
+  &.active {
+    border-left: 10px solid #DDD;
+  }
 }

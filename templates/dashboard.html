@@ -100,7 +100,19 @@
                         <div id="flashcards" class="col-sm-12">
                             <div class="custom-panel">
                                 <div class="row">
-                                    <div class="col-sm-12">FlashCards</div>
+                                    <div class="col-sm-12"><h4>Decks</h4></div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="selDecks">Select Deck:</label>
+                                            <select class="form-control" id="selDecks">
+                                                <option>Deck 1</option>
+                                                <option>Deck 2</option>
+                                                <option>Deck 3</option>
+                                                <option>Add Deck...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="front">
@@ -300,7 +312,7 @@
           </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button id="btn-confirm-flashcard" type="button" class="btn btn-primary">Add</button>
       </div>
     </div><!-- /.modal-content -->
