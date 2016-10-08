@@ -7,152 +7,309 @@
 {% endblock %}
 
 {% block content %}
-<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-<div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav side-nav">
-        <li class="active">
-            <a href="index.html"><i class="fa fa-fw fa-user"></i> Profile</a>
-        </li>
+<div id="wrapper">
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#courses"><i class="fa fa-fw fa-book"></i>
+                    Courses <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="courses" class="collapse in">
+                    <li class="active">
+                        <a href="#">Course 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Course 2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
 
-        <li>
-            <a href="javascript:;" data-toggle="collapse" data-target="#courses"><i class="fa fa-fw fa-book"></i>
-                Courses <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="courses" class="collapse in">
-                <li>
-                    <a href="#">Course 1</a>
-                </li>
-                <li>
-                    <a href="#">Course 2</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
-<!-- /.navbar-collapse -->
-
-<div id="page-wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="title">
-                    <h4>Section 1</h4>
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="title">
+                        <div class="form-group">
+                            <label for="sel1">Chapter:</label>
+                            <select class="form-control" id="sel1">
+                                <option>Chapter 1 - Chapter Name</option>
+                                <option>Chapter 2 - Chapter Name</option>
+                                <option>Chapter 3 - Chapter Name</option>
+                                <option>Chapter 4 - Chapter Name</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-9 col-xs-12">
-                <div class="row">
-                    <div id="notes" class="col-sm-12">
-                        <div class="custom-panel">
-                            <h5>Notes</h5>
-                            <table class="table table-striped table-hover table-notes">
-                                <thead>
-                                <tr>
-                                    <th>File Name</th>
-                                    <th>File Size</th>
-                                    <th>Date Uploaded</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td><i class="fa fa-file-o file-icon"></i><span
-                                            class="file-name">Some File.txt</span>
-                                    </td>
-                                    <td>80 KB</td>
-                                    <td>Oct 6th, 2016</td>
-                                </tr>
+                <div class="col-sm-9 col-xs-12">
+                    <div class="row">
+                        <div id="notes" class="col-sm-12">
+                            <div class="custom-panel">
+                                <h5>Notes</h5>
+                                <span class="btn btn-default btn-file">
+                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Upload Notes... <input type="file">
+                                </span>
+                                <table class="table table-striped table-hover table-notes">
+                                    <thead>
+                                    <tr>
+                                        <th>File Name</th>
+                                        <th>File Size</th>
+                                        <th>Date Uploaded</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><i class="fa fa-file-o file-icon"></i><span
+                                                class="file-name">Some File.txt</span>
+                                        </td>
+                                        <td>80 KB</td>
+                                        <td>Oct 6th, 2016</td>
+                                    </tr>
 
-                                <tr>
-                                    <td><i class="fa fa-file-o file-icon"></i><span
-                                            class="file-name">Some File.txt</span>
-                                    </td>
-                                    <td>80 KB</td>
-                                    <td>Oct 6th, 2016</td>
-                                </tr>
+                                    <tr>
+                                        <td><i class="fa fa-file-o file-icon"></i><span
+                                                class="file-name">Some File.txt</span>
+                                        </td>
+                                        <td>80 KB</td>
+                                        <td>Oct 6th, 2016</td>
+                                    </tr>
 
-                                <tr>
-                                    <td><i class="fa fa-file-o file-icon"></i><span
-                                            class="file-name">Some File.txt</span>
-                                    </td>
-                                    <td>80 KB</td>
-                                    <td>Oct 6th, 2016</td>
-                                </tr>
+                                    <tr>
+                                        <td><i class="fa fa-file-o file-icon"></i><span
+                                                class="file-name">Some File.txt</span>
+                                        </td>
+                                        <td>80 KB</td>
+                                        <td>Oct 6th, 2016</td>
+                                    </tr>
 
-                                <tr>
-                                    <td><i class="fa fa-file-o file-icon"></i><span
-                                            class="file-name">Some File.txt</span>
-                                    </td>
-                                    <td>80 KB</td>
-                                    <td>Oct 6th, 2016</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                                    <tr>
+                                        <td><i class="fa fa-file-o file-icon"></i><span
+                                                class="file-name">Some File.txt</span>
+                                        </td>
+                                        <td>80 KB</td>
+                                        <td>Oct 6th, 2016</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
                         </div>
 
-                    </div>
-
-                    <div id="flashcards" class="col-sm-12">
-                        <div class="custom-panel">
-                            <div class="row">
-                                <div class="col-sm-12">FlashCards</div>
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="card">
-                                        <div class="front">
-                                            Front content
-                                        </div>
-                                        <div class="back">
-                                            Back content
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="card">
-                                        <div class="front">
-                                            Front content
-                                        </div>
-                                        <div class="back">
-                                            Back content
+                        <div id="flashcards" class="col-sm-12">
+                            <div class="custom-panel">
+                                <div class="row">
+                                    <div class="col-sm-12">FlashCards</div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="card">
+                                            <div class="front">
+                                                Post no so what deal evil rent by real in. But her ready least set lived
+                                                spite solid. September how men saw tolerably two behaviour arranging.
+                                                She offices for highest and replied one venture pasture. Applauded no
+                                                discovery in newspaper allow
+                                            </div>
+                                            <div class="back">
+                                                ast set lived spite solid. September how men saw tolerably two behaviour
+                                                arranging. She offices for highest and replied one venture pasture.
+                                                Applauded no discovery in newspaper allow
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="card">
-                                        <div class="front">
-                                            Front content
-                                        </div>
-                                        <div class="back">
-                                            Back content
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="card">
+                                            <div class="front">
+                                                Post no so what deal evil rent by real in. But her ready least set lived
+                                                spite solid. September how men saw tolerably two behaviour arranging.
+                                                She offices for highest and replied one venture pasture. Applauded no
+                                                discovery in newspaper allow
+                                            </div>
+                                            <div class="back">
+                                                ast set lived spite solid. September how men saw tolerably two behaviour
+                                                arranging. She offices for highest and replied one venture pasture.
+                                                Applauded no discovery in newspaper allow
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col-xs-12 col-sm-6">
-                                    <div id="add-flashcard">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="card">
+                                            <div class="front">
+                                                Post no so what deal evil rent by real in. But her ready least set lived
+                                                spite solid. September how men saw tolerably two behaviour arranging.
+                                                She offices for highest and replied one venture pasture. Applauded no
+                                                discovery in newspaper allow
+                                            </div>
+                                            <div class="back">
+                                                ast set lived spite solid. September how men saw tolerably two behaviour
+                                                arranging. She offices for highest and replied one venture pasture.
+                                                Applauded no discovery in newspaper allow
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="card">
+                                            <div class="front">
+                                                Post no so what deal evil rent by real in. But her ready least set lived
+                                                spite solid. September how men saw tolerably two behaviour arranging.
+                                                She offices for highest and replied one venture pasture. Applauded no
+                                                discovery in newspaper allow
+                                            </div>
+                                            <div class="back">
+                                                ast set lived spite solid. September how men saw tolerably two behaviour
+                                                arranging. She offices for highest and replied one venture pasture.
+                                                Applauded no discovery in newspaper allow
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div id="add-flashcard">
+                                            <button id="btn-add-flashcard" data-toggle="modal"
+                                                    data-target="#add-flashcard-dialog"
+                                                    type="button" class="btn btn-default"><i
+                                                    class="fa fa-plus fa-5x" aria-hidden="true"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-3 col-xs-12">
-                <div id="section-info" class="col-xs-12">
-                    <div class="custom-panel">
-                        Section Info here
-                    </div>
-                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div id="section-info" class="col-xs-12">
+                        <div class="custom-panel">
+                            <h4>Course Info</h4>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th>Instructor</th>
+                                        <td>Instructor Name</td>
+                                    </tr>
 
-                <div id="polls" class="col-xs-12">
-                    <div class="custom-panel">
-                        Polls here
+                                    <tr>
+                                        <th>Course Name</th>
+                                        <td>Course Name</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Course Description</th>
+                                        <td class="text-muted">e in just mr door body held john down he. So journey
+                                            greatly or garrets. Draw door kept do so come on open mean. Es
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="polls" class="col-xs-12">
+                        <div class="custom-panel">
+                            <h4>Polls</h4>
+
+                            <h5 class="text-center">Active</h5>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <th>Name</th>
+                                    <th>Date Added</th>
+                                    <th>Closes</th>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Poll Name</td>
+                                    <td>Oct 6th, 2016</td>
+                                    <td>Oct 9th, 2016</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Poll Name</td>
+                                    <td>Oct 6th, 2016</td>
+                                    <td>Oct 9th, 2016</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Poll Name</td>
+                                    <td>Oct 6th, 2016</td>
+                                    <td>Oct 9th, 2016</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Poll Name</td>
+                                    <td>Oct 6th, 2016</td>
+                                    <td>Oct 9th, 2016</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <h5 class="text-center">Closed</h5>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                <th>Name</th>
+                                <th>Date Added</th>
+                                <th>Closed</th>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Poll Name</td>
+                                    <td>Oct 6th, 2016</td>
+                                    <td>Oct 9th, 2016</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Poll Name</td>
+                                    <td>Oct 6th, 2016</td>
+                                    <td>Oct 9th, 2016</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Poll Name</td>
+                                    <td>Oct 6th, 2016</td>
+                                    <td>Oct 9th, 2016</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Poll Name</td>
+                                    <td>Oct 6th, 2016</td>
+                                    <td>Oct 9th, 2016</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.container-fluid -->
+        <!-- /.container-fluid -->
 
+    </div>
 </div>
+
+<div class="modal fade" id="add-flashcard-dialog" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Add Flashcard</h4>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+              <label for="txt-flashcard-front">Front</label>
+              <textarea id="txt-flashcard-front" class="form-control" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="txt-flashcard-back">Back</label>
+              <textarea id="txt-flashcard-back" class="form-control" rows="3"></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="btn-confirm-flashcard" type="button" class="btn btn-primary">Add</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <!-- /#page-wrapper -->
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/dashboard.js' %}"></script>
 {% endblock %}

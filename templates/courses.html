@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/x-scss" href="{% static 'sass/style.scss' %}">
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+            <li class="active">
+                <a href="index.html"><i class="fa fa-fw fa-user"></i> Profile</a>
+            </li>
+
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#courses"><i class="fa fa-fw fa-book"></i>
+                    Courses <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="courses" class="collapse in">
+                    <li>
+                        <a href="#">Course 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Course 2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 custom-panel">
+                    <h4>Courses</h4>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-4">
+                            <div class="course-preview shadow">
+                                <div class="course-name">Course Name</div>
+                                <br>
+                                <div class="course-description text-muted">Post no so what deal evil rent by real in. But her ready
+                                    least set lived spite solid. September how men saw tolerably two behaviour
+                                </div>
+                                <br>
+                                <div class="course-instructor">
+                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                    <span>Instructor Name</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4">
+                            <div class="course-preview shadow">
+                                <div class="course-name">Course Name</div>
+                                <br>
+                                <div class="course-description text-muted">Post no so what deal evil rent by real in. But her ready
+                                    least set lived spite solid. September how men saw tolerably two behaviour
+                                </div>
+                                <br>
+                                <div class="course-instructor">
+                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                    <span>Instructor Name</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4">
+                            <div class="course-preview shadow">
+                                <div class="course-name">Course Name</div>
+                                <br>
+                                <div class="course-description text-muted">Post no so what deal evil rent by real in. But her ready
+                                    least set lived spite solid. September how men saw tolerably two behaviour
+                                </div>
+                                <br>
+                                <div class="course-instructor">
+                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                    <span>Instructor Name</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4">
+                            <div class="course-preview shadow">
+                                <div class="course-name">Course Name</div>
+                                <br>
+                                <div class="course-description text-muted">Post no so what deal evil rent by real in. But her ready
+                                    least set lived spite solid. September how men saw tolerably two behaviour
+                                </div>
+                                <br>
+                                <div class="course-instructor">
+                                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                    <span>Instructor Name</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}}

@@ -7,12 +7,42 @@
 
 {% block content %}
 
-home page content
-<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/bannerImg.jpg' %}">--</div>
+<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/bannerImg.jpg' %}"></div>
+
+<div class="container-fluid home-page-container">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <div>Don't have an account?</div>
+            <button type="button" class="btn btn-primary">Join Staplr</button>
+        </div>
+
+        <div class="col-sm-12 text-center">
+            <h3>What you can do with Staplr</h3>
+            <ul class="list-unstyled">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer text-center">
+        footer here
+    </div>
+</div>
+
+
 
 {% endblock %}
 
-{% block extra_js %}}
+{% block footer %}
+
+
+{% endblock %}
+
+
+{% block extra_js %}
 <script src="{% static 'js/parallax.js' %}"></script>
 <script src="{% static 'js/home.js' %}"></script>
 {% endblock %}
