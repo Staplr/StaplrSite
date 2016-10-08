@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/x-scss" href="{% static 'sass/login.scss' %}">
+<link rel="stylesheet" type="text/x-scss" href="{% static 'sass/style.scss' %}">
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#courses"><i class="fa fa-fw fa-book"></i>
+                    Courses <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="courses" class="collapse in">
+                    <li class="active">
+                        <a href="#">Course 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Course 2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 custom-panel">
+                    <h3>Poll Title</h3>
+                    <br>
+                    <fieldset class="form-group">
+                        <legend>He moonlight difficult engrossed an it sportsmen. Interested has all devonshire
+                            difficulty gay assistance joy. Unaffected at ye of compliment alteration to. Place voic
+                        </legend>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="option1"
+                                       value="option1" checked>
+                                Option one
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="option1""
+                                value="option2">
+                                Option two
+                            </label>
+                        </div>
+                    </fieldset>
+                    <br>
+
+                    <fieldset class="form-group">
+                        <legend>He moonlight difficult engrossed an it sportsmen. Interested has all devonshire
+                            difficulty gay assistance joy. Unaffected at ye of compliment alteration to. Place voic
+                        </legend>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="option2"
+                                       value="option1" checked>
+                                Option one
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="option2"
+                                       value="option2">
+                                Option two
+                            </label>
+                        </div>
+                    </fieldset>
+                    <br>
+
+                    <fieldset class="form-group">
+                        <legend>He moonlight difficult engrossed an it sportsmen. Interested has all devonshire
+                            difficulty gay assistance joy. Unaffected at ye of compliment alteration to. Place voic
+                        </legend>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="option3"
+                                       value="option1" checked>
+                                Option one
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="option3"
+                                       value="option2">
+                                Option two
+                            </label>
+                        </div>
+                    </fieldset>
+                    <br>
+
+                    <div class="modal-footer">
+                        <button id="btn-confirm-flashcard" type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}}
