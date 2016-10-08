@@ -41,15 +41,19 @@
                 </button>
                 <h4 class="modal-title">Sign Up</h4>
             </div>
-            <form>
+            <form method="POST" id="form_sign_up" action="http://api.batterystapler.com/users/">
                 <div class="modal-body">
 
                     <div class="form-group">
                         <label for="txtName">Name</label>
-                        <input name="name" type="email" class="form-control" id="txtName">
+                        <input name="name" type="text" class="form-control" id="txtName">
                         </small>
                     </div>
-
+                    <div class="form-group">
+                        <label for="txtUserName">Username</label>
+                        <input name="username" type="text" class="form-control" id="txtName">
+                        </small>
+                    </div>
                     <div class="form-group">
                         <label for="txtEmail">Email address</label>
                         <input name="email" type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp"
@@ -61,24 +65,24 @@
 
                     <div class="form-group">
                         <label for="txtPassword">Password</label>
-                        <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+                        <input name="password" type="password" class="form-control" id="txtPassword" placeholder="Password">
                     </div>
 
                     <div class="form-group">
                         <label for="txtRepeatPassword">Password</label>
                         <input type="password" class="form-control" id="txtRepeatPassword" placeholder="Password">
                     </div>
-
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button id="btn-confirm-flashcard" type="submit" class="btn btn-primary">Sign Up</button>
+                    <button id="btn-confirm-flashcard" type="button" class="btn btn-primary">Sign Up</button>
                 </div>
             </form>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
 
 
 {% endblock %}
@@ -91,5 +95,23 @@
 {% block extra_js %}
 <script src="{% static 'js/parallax.js' %}"></script>
 <script src="{% static 'js/home.js' %}"></script>
+<script type="text/javascript">
+    $('#btn-confirm-flashcard').click(function(){
+        var datastring = $('#form_sign_up').serialize();
+
+        $.ajax({url: url + 'users/',
+                method: "POST",
+                data: datastring,
+                success: function(result){
+                    user = JSON.parse(result);
+                    localStorage.setItem('user', user);
+                },
+                failure: function(result){
+                    message = JSON.parse(result);
+                    console.log(message);
+                }})
+    })
+
+</script>
 {% endblock %}
 
