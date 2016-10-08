@@ -18,7 +18,6 @@ if(localStorage.getItem('user') != null){
                 success: function(result){
                     user = JSON.stringify(result);
                     localStorage.setItem('user', user);
-                    window.location.href = 'dashboard';
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                   console.log(textStatus, errorThrown);
@@ -38,3 +37,14 @@ $(document).on('change', ':file', function() {
 });
 
 });
+
+function getUserObject(user_id){
+   return $.ajax({
+        url: api + 'user/',
+        data: {'id': user_id},
+        success(result){
+            user_object = result;
+        },
+
+    })
+}
