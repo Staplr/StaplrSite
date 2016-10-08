@@ -97,12 +97,16 @@
     $('#btn-confirm-flashcard').click(function(){
         var datastring = $('#form_sign_up').serialize();
 
-        $.ajax({url: url + 'users/',
+        $.ajax({url: api + 'users/',
                 method: "POST",
                 data: datastring,
                 success: function(result){
-                    user = JSON.parse(result);
+                    user = JSON.stringify(result);
                     localStorage.setItem('user', user);
+                    window.location.href = 'dashboard'
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                  console.log(textStatus, errorThrown);
                 },
                 failure: function(result){
                     message = JSON.parse(result);
