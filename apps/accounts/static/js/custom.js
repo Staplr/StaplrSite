@@ -3,5 +3,4 @@
  */
 $(document).ready(function () {
     $(".card").flip();
-    console.log("ready!");
 });

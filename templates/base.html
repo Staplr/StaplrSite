@@ -140,7 +140,7 @@
                     </ul>
                 </li>
             </ul>
-
+        </nav>
         {% block content %}
 
         {% endblock %}
@@ -151,6 +151,7 @@
     <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/flip.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
+    {% block extra_js %} {% endblock %}
 </body>
 
 </html>
